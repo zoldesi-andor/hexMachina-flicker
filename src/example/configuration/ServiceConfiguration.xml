@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<root>
+	
+	<serviceLocator id="serviceLocator" type="hex.config.stateful.ServiceLocator">
+        <item> 
+			<key type="Class" 	value="example.module.thumbnail.service.IFlickrService"/> 
+			<value type="Class" value="example.module.thumbnail.service.FlickrService"/>
+		</item>
+    </serviceLocator>
+
+
+</root>

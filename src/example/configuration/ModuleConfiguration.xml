@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<root>
+	<module id="flickrModule" type="example.module.flickr.FlickrModule">
+		<argument ref="flickrView"/>
+		
+		
+		
+        <listen ref="thumbnailModule">
+			<event static-ref="example.module.thumbnail.message.ThumbnailModuleMessage.SET_FULLSIZE_GALLERY_IMAGE" method="setFullSizeGalleryImage"/>
+		</listen>
+	</module>
+	
+	<module id="thumbnailModule" type="example.module.thumbnail.ThumbnailModule">
+		<method-call name="setInitialImages" />
+		<argument ref="thumbnailView"/>
+		
+		<argument ref="serviceLocator"/>
+		
+		<listen ref="flickrModule">
+			<event static-ref="example.module.flickr.message.FlickrModuleMessage.GET_NEW_IMAGE" method="getFullSizeGalleryImage"/>
+		</listen>
+	</module>
+	
+
+</root>

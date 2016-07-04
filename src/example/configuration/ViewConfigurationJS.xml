@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<root>
+	
+	<view id="flickrView" type="example.module.flickr.view.FlickrViewJS" />
+	<view id="thumbnailView" type="example.module.thumbnail.view.ThumbnailView" >
+	</view>
+	
+
+</root>
