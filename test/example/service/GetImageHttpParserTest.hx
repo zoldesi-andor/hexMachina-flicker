@@ -1,5 +1,7 @@
 package example.service;
 import example.module.thumbnail.service.GetImageHttpParser;
+import hex.unittest.assertion.Assert;
+import hex.error.Exception;
 
 /**
  * ...
@@ -24,11 +26,12 @@ class GetImageHttpParserTest
     }
 
 	@Test( "Test parse photos size" )
-    public function testParsePageNumber() : Void
+    public function testParsePhotosSize() : Void
     {
         var result = parser.parse(getSampleJson());
 		Assert.equals(3, result.urls.length, "urls length should be 3" );
     }
+
 	
 	function getSampleJson() : String
 	{
@@ -38,6 +41,7 @@ class GetImageHttpParserTest
 			"{ \"id\": \"27974244212\", \"owner\": \"9964400@N07\", \"secret\": \"0a218ba364\", \"server\": \"7346\", \"farm\": 8, \"title\": \"First home on the last day.\", \"ispublic\": 1, \"isfriend\": 0, \"isfamily\": 0 }, " +
 			"{ \"id\": \"27462413163\", \"owner\": \"9964400@N07\", \"secret\": \"61a5f62692\", \"server\": \"7478\", \"farm\": 8, \"title\": \"Back second today!\", \"ispublic\": 1, \"isfriend\": 0, \"isfamily\": 0 } " +
 			"] }, \"stat\": \"ok\" }"; 
+		return json;
 	}
 	
 }

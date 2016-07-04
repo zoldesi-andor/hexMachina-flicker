@@ -19,6 +19,7 @@ class FlickrSuiteMainTest
 
 	static public function main() : Void
 	{
+		
 		var emu = new ExMachinaUnitCore();
 
 		#if flash
@@ -31,7 +32,6 @@ class FlickrSuiteMainTest
 
 		emu.addTest( FlickrSuite );
 		emu.run();
-
 	}
 	
 }
